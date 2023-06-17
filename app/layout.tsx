@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 import { darkTheme, lightTheme } from "@/app/styles/theme";
+import "@/app/styles/globals.css";
 
 export default function RootLayout({
 	children,
@@ -23,7 +24,9 @@ export default function RootLayout({
 						dark: darkTheme.className,
 					}}
 				>
-					<NextUIProvider>{children}</NextUIProvider>
+					<NextUIProvider>
+						<div className="wrapper">{children}</div>
+					</NextUIProvider>
 				</NextThemeProvider>
 			</body>
 		</html>

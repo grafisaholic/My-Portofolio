@@ -1,0 +1,53 @@
+[
+	{
+		"name": "Payreless",
+		"description": "Payreless is an Android-based billing application that is integrated with the radius server engine and a dashboard web panel.",
+		"link": {
+			"href": "https://payreless.com",
+			"external": true
+		},
+		"featured": true,
+		"isPrimary": true,
+		"release": "01/02/2021"
+	},
+	{
+		"name": "Mayuni Payment Gateway",
+		"description": "Mayuni is a business management payment gateway application for easy payment channels with various payment methods.",
+		"link": {
+			"href": "https://www.mayuni.co.id",
+			"external": true
+		},
+		"featured": true,
+		"release": "01/02/2021"
+	},
+	{
+		"name": "Payuni Software PPOB",
+		"description": "Payuni software is a cloud-based PPOB credit and payment server application to make it easier for merchants to monitor transactions, deposits, made using microservices infrastructure.",
+		"link": {
+			"href": "https://payuni.co.id",
+			"external": true
+		},
+		"featured": true,
+		"release": "01/02/2021"
+	},
+	{
+		"name": "nove-qris-generator",
+		"description": "Encode qris or qrcode with using link, very easy and usefull.",
+		"link": {
+			"href": "https://www.npmjs.com/package/node-qris-generator",
+			"external": true
+		},
+		"featured": false,
+		"release": "01/02/2021"
+	},
+	{
+		"name": "eKinerja Rembang",
+		"description": "eKinerja is an electronic employee performance assessment system within the Rembang Regency Government.",
+		"link": {
+			"href": "https://ekinerja.rembangkab.go.id",
+			"external": true
+		},
+		"featured": false,
+		"release": "01/02/2021"
+	}
+]
