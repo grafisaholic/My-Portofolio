@@ -1,6 +1,7 @@
 "use client";
+
 import cn from "classnames";
-import { Grid, Spacer, Text } from "@nextui-org/react";
+import { Grid, Spacer, Text, Link } from "@nextui-org/react";
 
 export default function About() {
 	return (
@@ -31,20 +32,12 @@ export default function About() {
 				<Text size={28} h2 css={{ paddingBottom: 0 }}>
 					Skillset
 				</Text>
-				<div className={cn("link")}>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<style jsx>
-						{`
-							.link {
-								margin-left: 20px;
-							}
-						`}
-					</style>
+				<div className={cn("link")} style={{ marginLeft: 20 }}>
+					<li>Bootstrap (3+), Cakra-ui</li>
+					<li>Node js, JavaScript (ES2015+)</li>
+					<li>jQuery, Reactjs, NextJs</li>
+					<li>Mysql, MONGODB, Redis</li>
+					<li>Git, Linux (basic command-line operations)</li>
 				</div>
 			</Grid>
 
@@ -52,20 +45,69 @@ export default function About() {
 				<Text size={28} h2 css={{ paddingBottom: 0 }}>
 					Links
 				</Text>
-				<div className={cn("link")}>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<li>jsdbfs</li>
-					<style jsx>
-						{`
-							.link {
-								margin-left: 20px;
-							}
-						`}
-					</style>
+				<div className={cn("link")} style={{ marginLeft: 20 }}>
+					<li>
+						<Link
+							href={"https://github.com/grafisaholic"}
+							isExternal
+							color="secondary"
+						>
+							Github
+						</Link>
+					</li>
+					<li>
+						<Link
+							href={"https://github.com/grafisaholic"}
+							isExternal
+							color="secondary"
+						>
+							Gitlab
+						</Link>
+					</li>
+					<li>
+						<Link
+							href={"https://www.linkedin.com/in/grafisaholic"}
+							isExternal
+							color="secondary"
+						>
+							LinkedIn
+						</Link>
+					</li>
+					<li>
+						<Link
+							href={"https://twitter.com/khabibur__"}
+							isExternal
+							color="secondary"
+						>
+							Twitter
+						</Link>
+					</li>
+					<li>
+						<Link
+							href={"https://www.showwcase.com/grafisaholic"}
+							isExternal
+							color="secondary"
+						>
+							Showwcase
+						</Link>
+					</li>
+				</div>
+			</Grid>
+
+			<Grid xs={12} direction={"column"}>
+				<Text size={28} h2 css={{ paddingBottom: 0 }}>
+					Support
+				</Text>
+				<div className={cn("link")} style={{ marginLeft: 20 }}>
+					<li>
+						<Link
+							href={"https://saweria.co/grafisaholic"}
+							isExternal
+							color="secondary"
+						>
+							Saweria (indonesia only)
+						</Link>
+					</li>
 				</div>
 			</Grid>
 		</Grid.Container>

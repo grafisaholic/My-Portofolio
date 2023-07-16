@@ -2,7 +2,7 @@
 import { Container } from "@nextui-org/react";
 import React from "react";
 
-import Navigation from "../components/navigation";
+import Navigation from "../../components/navigation";
 
 export default function ProjectsLayout({
 	children,

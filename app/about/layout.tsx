@@ -1,7 +1,7 @@
 "use client";
 import { Container } from "@nextui-org/react";
 
-import Navigation from "../components/navigation";
+import Navigation from "../../components/navigation";
 
 export default function ProjectsLayout({
 	children,

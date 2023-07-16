@@ -1,7 +1,7 @@
 "use client";
 
 import { Grid, Text, Spacer } from "@nextui-org/react";
-import { FeatureProject, Project } from "../components/project";
+import { FeatureProject, Project } from "../../components/project";
 
 import ProjectData from "@/_data/projects.json";
 
