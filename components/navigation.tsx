@@ -23,6 +23,16 @@ export default function Navigation() {
 					</Link>
 				))}
 			</Navbar.Content>
+			<Navbar.Toggle showIn="xs" />
+			<Navbar.Collapse>
+				{navigation.map((item) => (
+					<Navbar.CollapseItem key={item.href}>
+						<Link href={item.href}>
+							<Text css={{ opacity: 0.6 }}>{item.name}</Text>
+						</Link>
+					</Navbar.CollapseItem>
+				))}
+			</Navbar.Collapse>
 		</Navbar>
 	);
 }

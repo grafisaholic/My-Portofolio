@@ -20,7 +20,7 @@ export default function Home() {
 		>
 			<Grid
 				css={{
-					gap: 15,
+					gap: 10,
 					display: "flex",
 					paddingBottom: 0,
 				}}

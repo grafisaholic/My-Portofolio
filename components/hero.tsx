@@ -23,7 +23,7 @@ function Hero() {
 						href="https://payreless.com"
 						style={{ textDecoration: "underline" }}
 					>
-						payreless{" "}
+						Payreless{" "}
 					</Link>
 					and working on{" "}
 					<Link
@@ -39,9 +39,10 @@ function Hero() {
 			<Grid
 				alignItems="center"
 				justify="center"
-				css={{ w: "100%" }}
+				css={{ w: "100%", marginTop: 10 }}
 				direction="row"
 			>
+				<Text css={{ opacity: 0.6 }}>Current favorite tech stack/tools :</Text>
 				<CurrentFavTech />
 			</Grid>
 		</Grid.Container>

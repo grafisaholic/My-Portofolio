@@ -57,7 +57,7 @@ export default function About() {
 					</li>
 					<li>
 						<Link
-							href={"https://github.com/grafisaholic"}
+							href={"https://gitlab.com/grafisaholic"}
 							isExternal
 							color="secondary"
 						>

@@ -12,7 +12,7 @@ export default function ProjectsLayout({
 	return (
 		<>
 			<Navigation />
-			<Container css={{ py: "$10", px: "$8" }}>{children}</Container>
+			<Container css={{ py: "$10" }}>{children}</Container>
 		</>
 	);
 }
