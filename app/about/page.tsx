@@ -49,6 +49,7 @@ export default function About() {
 					<li>
 						<Link
 							href={"https://github.com/grafisaholic"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>
@@ -57,7 +58,8 @@ export default function About() {
 					</li>
 					<li>
 						<Link
-							href={"https://github.com/grafisaholic"}
+							href={"https://gitlab.com/grafisaholic"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>
@@ -67,6 +69,7 @@ export default function About() {
 					<li>
 						<Link
 							href={"https://www.linkedin.com/in/grafisaholic"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>
@@ -76,6 +79,7 @@ export default function About() {
 					<li>
 						<Link
 							href={"https://twitter.com/khabibur__"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>
@@ -85,6 +89,7 @@ export default function About() {
 					<li>
 						<Link
 							href={"https://www.showwcase.com/grafisaholic"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>
@@ -102,6 +107,7 @@ export default function About() {
 					<li>
 						<Link
 							href={"https://saweria.co/grafisaholic"}
+							target="_blank"
 							isExternal
 							color="secondary"
 						>

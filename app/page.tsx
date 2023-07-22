@@ -6,8 +6,9 @@ import Link from "next/link";
 import Hero from "@/components/hero";
 
 const navigation = [
-	{ name: "Projects", href: "/projects" },
-	{ name: "About", href: "/about" },
+	{ name: "projects", href: "/projects" },
+	{ name: "about", href: "/about" },
+	{ name: "uses", href: "/uses" },
 ];
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
 		>
 			<Grid
 				css={{
-					gap: 15,
+					gap: 10,
 					display: "flex",
 					paddingBottom: 0,
 				}}

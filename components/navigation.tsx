@@ -2,8 +2,9 @@ import { Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 
 const navigation = [
-	{ name: "Projects", href: "/projects" },
-	{ name: "About", href: "/about" },
+	{ name: "projects", href: "/projects" },
+	{ name: "about", href: "/about" },
+	{ name: "uses", href: "/uses" },
 ];
 
 export default function Navigation() {
@@ -23,6 +24,16 @@ export default function Navigation() {
 					</Link>
 				))}
 			</Navbar.Content>
+			<Navbar.Toggle showIn="xs" />
+			<Navbar.Collapse>
+				{navigation.map((item) => (
+					<Navbar.CollapseItem key={item.href}>
+						<Link href={item.href}>
+							<Text css={{ opacity: 0.6 }}>{item.name}</Text>
+						</Link>
+					</Navbar.CollapseItem>
+				))}
+			</Navbar.Collapse>
 		</Navbar>
 	);
 }
