@@ -2,8 +2,9 @@ import { Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 
 const navigation = [
-	{ name: "Projects", href: "/projects" },
-	{ name: "About", href: "/about" },
+	{ name: "projects", href: "/projects" },
+	{ name: "about", href: "/about" },
+	{ name: "uses", href: "/uses" },
 ];
 
 export default function Navigation() {

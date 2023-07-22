@@ -33,7 +33,7 @@ export const Project = ({ name, desc, link, ...props }: ProjectProps) => {
 			<Card.Header>
 				<Grid.Container justify="flex-end">
 					{/* <Text css={{ color: "$accents8" }}>{release}</Text> */}
-					<Text css={{ color: "$accents8" }}>mongodb</Text>
+					{/* <Text css={{ color: "$accents8" }}>mongodb</Text> */}
 				</Grid.Container>
 			</Card.Header>
 			<Card.Body css={{ py: "$1" }}>
@@ -45,7 +45,7 @@ export const Project = ({ name, desc, link, ...props }: ProjectProps) => {
 				</Text>
 			</Card.Body>
 			<Card.Footer>
-				<NextLink href={link.href} passHref>
+				<NextLink href={link.href} passHref target={"_blank"}>
 					<Button
 						light
 						color="secondary"
@@ -83,7 +83,7 @@ export const FeatureProject = ({
 		<Card css={{ px: "$6" }} isHoverable>
 			<Card.Header>
 				<Grid.Container justify="flex-end">
-					<Text css={{ color: "$accents8" }}>nextjs</Text>
+					{/* <Text css={{ color: "$accents8" }}>nextjs</Text> */}
 				</Grid.Container>
 			</Card.Header>
 			<Card.Body css={{ py: "$2" }}>
@@ -95,7 +95,7 @@ export const FeatureProject = ({
 				</Text>
 			</Card.Body>
 			<Card.Footer>
-				<NextLink href={link?.href} passHref>
+				<NextLink href={link?.href} passHref target={"_blank"}>
 					<Button
 						light
 						color="secondary"

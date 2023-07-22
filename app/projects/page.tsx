@@ -19,13 +19,9 @@ export default function ProjectsPage() {
 					<Text size={30} h2 css={{ paddingBottom: 0 }}>
 						Featured Projects
 					</Text>
-					<Text
-						color="rgb(161 161 170)"
-						css={{ marginTop: -10, marginBottom: 15 }}
-					>
+					<Text color="rgb(161 161 170)" css={{ marginTop: -10 }}>
 						Some of the projects are from work and some are on my own time.
 					</Text>
-					<hr />
 				</Grid>
 
 				<Grid xs={12} lg={6} md={6}>
@@ -57,7 +53,6 @@ export default function ProjectsPage() {
 					<Text size={30} h2 css={{ paddingBottom: 0 }}>
 						Other Projects
 					</Text>
-					<hr />
 				</Grid>
 
 				<Grid.Container gap={2} direction="row">
