@@ -1,4 +1,4 @@
-import { Link, Row, Text, Grid } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
 export function DevSoftware() {
 	return (
@@ -9,90 +9,67 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Visual Studio Code
 				</Link>
-				<ul>
-					<li>
-						<Row>
-							<Text>Theme : </Text>
+				<ul className="ml-10">
+					<li className="flex flex-row">
+						<h4>Theme : </h4>
+						<Link
+							href={
+								"https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+							}
+							color="primary"
+						>
+							Night Owl
+						</Link>
+					</li>
+					<li className="flex flex-row">
+						<h4>Font : </h4>
+						<Link
+							href={"https://github.com/microsoft/cascadia-code"}
+							color="primary"
+						>
+							Cascadia Code
+						</Link>
+					</li>
+					<li className="flex flex-row">
+						<h4>Extension : </h4>
+						<div>
 							<Link
 								href={
-									"https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+									"https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
 								}
 								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
 							>
-								Night Owl
+								Tailwind CSS IntelliSense,
 							</Link>
-						</Row>
-					</li>
-					<li>
-						<Row>
-							<Text>Font : </Text>
 							<Link
-								href={"https://github.com/microsoft/cascadia-code"}
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+								}
 								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
 							>
-								Cascadia Code
+								Prettier,
 							</Link>
-						</Row>
-					</li>
-					<li>
-						<Grid.Container direction="row">
-							Extension :
-							<div>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Tailwind CSS IntelliSense,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Prettier,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Eslint,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Dart
-								</Link>
-							</div>
-						</Grid.Container>
+							<Link
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+								}
+								color="primary"
+							>
+								Eslint,
+							</Link>
+							<Link
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
+								}
+								color="primary"
+							>
+								Dart
+							</Link>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -102,6 +79,7 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Figma
 				</Link>
@@ -112,6 +90,7 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Brave
 				</Link>
@@ -122,6 +101,7 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Postman
 				</Link>
@@ -162,20 +142,12 @@ export function OtherSoftware() {
 				>
 					iTerm2
 				</Link>
-				<ul>
-					<li>
-						<Row>
-							<Text>Custom : </Text>
-							<Link
-								href={"https://github.com/ohmyzsh/ohmyzsh"}
-								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
-							>
-								oh-my-zsh
-							</Link>
-						</Row>
+				<ul className="ml-10">
+					<li className="flex flex-row">
+						<h4>Custom : </h4>
+						<Link href={"https://github.com/ohmyzsh/ohmyzsh"} color="primary">
+							oh-my-zsh
+						</Link>
 					</li>
 				</ul>
 			</li>
@@ -185,6 +157,7 @@ export function OtherSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Spotify
 				</Link>
@@ -195,6 +168,7 @@ export function OtherSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Trello (Mangement Task)
 				</Link>

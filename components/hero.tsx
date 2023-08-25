@@ -1,53 +1,37 @@
-import { Grid, Text } from "@nextui-org/react";
 import Link from "next/link";
 
 import CurrentFavTech from "./content/current-fav-tech";
 
 function Hero() {
 	return (
-		<Grid.Container gap={2} direction="column" css={{ textAlign: "center" }}>
-			<Grid>
-				<Text h1 size={60} css={{ textGradient: "45deg, $red600, $blue600" }}>
-					Grafisaholic
-				</Text>
-			</Grid>
-			<Grid>
-				<Text css={{ opacity: 0.6 }}>
+		<section className="gap-8 text-center flex flex-col container">
+			<h1 className="tracking-tight inline font-bold text-[60px] bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
+				Grafisaholic
+			</h1>
+
+			<div>
+				<p className="opacity-60">
 					Hi, my name is Khabibur Rokhman. Full stack web developer skilled SQL,
 					mongoDB, node.js, and want to try to learn more.
-				</Text>
-				<Text css={{ opacity: 0.6 }}>
+				</p>
+				<p className="opacity-60">
 					I&apos;m currently building project{" "}
-					<Link
-						target={"_blank"}
-						href="https://payreless.com"
-						style={{ textDecoration: "underline" }}
-					>
-						Payreless{" "}
-					</Link>
+					<Link passHref href="https://payreless.com" target="_blank">
+						Payreless
+					</Link>{" "}
 					and working on{" "}
-					<Link
-						target={"_blank"}
-						href="https://findig.id"
-						style={{ textDecoration: "underline" }}
-					>
-						PT. Fintek Digital Nusantara{" "}
-					</Link>
+					<Link passHref href="https://findig.id" target="_blank">
+						PT. Fintek Digital Nusantara
+					</Link>{" "}
 					at day to day.
-				</Text>
-			</Grid>
-			<Grid
-				alignItems="center"
-				justify="center"
-				css={{ w: "100%", marginTop: 10 }}
-				direction="row"
-			>
-				<Text css={{ opacity: 0.6 }}>
-					Current favorite tech stack / tools :
-				</Text>
+				</p>
+			</div>
+
+			<div className="items-center gap-3 justify-center w-full flex flex-col">
+				<h3 className="opacity-60">Current favourite tech stack / tools :</h3>
 				<CurrentFavTech />
-			</Grid>
-		</Grid.Container>
+			</div>
+		</section>
 	);
 }
 

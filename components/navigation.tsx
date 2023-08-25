@@ -1,4 +1,11 @@
-import { Navbar, Text } from "@nextui-org/react";
+import {
+	Navbar,
+	NavbarMenu,
+	NavbarContent,
+	NavbarMenuToggle,
+	NavbarMenuItem,
+	NavbarItem,
+} from "@nextui-org/react";
 import Link from "next/link";
 
 const navigation = [
@@ -9,31 +16,35 @@ const navigation = [
 
 export default function Navigation() {
 	return (
-		<Navbar isBordered variant="floating">
-			<Navbar.Brand>
+		<Navbar isBordered maxWidth="xl">
+			<NavbarContent>
 				<Link href="/">
-					<Text h1 size={30} css={{ textGradient: "45deg, $red600, $blue600" }}>
+					<h1 className="text-[30px] font-bold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
 						GR
-					</Text>
+					</h1>
 				</Link>
-			</Navbar.Brand>
-			<Navbar.Content hideIn={"xs"}>
+			</NavbarContent>
+			<NavbarContent className="sm:flex basis-1/5 sm:basis-full" justify="end">
 				{navigation.map((item) => (
-					<Link key={item.href} href={item.href}>
-						<Text css={{ opacity: 0.6 }}>{item.name}</Text>
-					</Link>
-				))}
-			</Navbar.Content>
-			<Navbar.Toggle showIn="xs" />
-			<Navbar.Collapse>
-				{navigation.map((item) => (
-					<Navbar.CollapseItem key={item.href}>
-						<Link href={item.href}>
-							<Text css={{ opacity: 0.6 }}>{item.name}</Text>
+					<NavbarItem key={item.href}>
+						<Link href={item.href} passHref className="opacity-60">
+							{item.name}
 						</Link>
-					</Navbar.CollapseItem>
+					</NavbarItem>
 				))}
-			</Navbar.Collapse>
+			</NavbarContent>
+			<NavbarContent className="sm:hidden">
+				<NavbarMenuToggle />
+			</NavbarContent>
+			<NavbarMenu>
+				{navigation.map((item) => (
+					<NavbarMenuItem key={item.href}>
+						<Link href={item.href} passHref className="opacity-60">
+							{item.name}
+						</Link>
+					</NavbarMenuItem>
+				))}
+			</NavbarMenu>
 		</Navbar>
 	);
 }

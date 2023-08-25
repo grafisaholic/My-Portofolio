@@ -1,5 +1,5 @@
 "use client";
-import { Container } from "@nextui-org/react";
+
 import React from "react";
 
 import Navigation from "../../components/navigation";
@@ -10,9 +10,11 @@ export default function ProjectsLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<>
+		<section className="h-full w-full">
 			<Navigation />
-			<Container css={{ py: "$10" }}>{children}</Container>
-		</>
+			<div className="flex flex-col py-10 items-center justify-center">
+				{children}
+			</div>
+		</section>
 	);
 }

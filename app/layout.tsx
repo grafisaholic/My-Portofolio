@@ -1,11 +1,8 @@
-"use client";
+import "@/styles/globals.css";
 
 import React from "react";
-import { NextUIProvider } from "@nextui-org/react";
+import { Providers } from "./provider";
 // import { ThemeProvider as NextThemeProvider } from "next-themes";
-
-// import { darkTheme, lightTheme } from "@/app/styles/theme";
-import "@/app/styles/globals.css";
 
 export default function RootLayout({
 	children,
@@ -13,12 +10,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className="dark">
+		<html lang="en" className="dark" suppressHydrationWarning>
 			<head />
 			<body>
-				<NextUIProvider>
-					<div className="wrapper">{children}</div>
-				</NextUIProvider>
+				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+					<main className="h-screen">{children}</main>
+				</Providers>
 			</body>
 		</html>
 	);

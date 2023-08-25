@@ -1,6 +1,3 @@
-"use client";
-
-import { Grid, Text } from "@nextui-org/react";
 import Link from "next/link";
 
 import Hero from "@/components/hero";
@@ -13,29 +10,20 @@ const navigation = [
 
 export default function Home() {
 	return (
-		<Grid.Container
-			gap={8}
-			alignItems="center"
-			justify="center"
-			css={{ minHeight: "70vh", flexDirection: "column", paddingTop: "$52" }}
-		>
-			<Grid
-				css={{
-					gap: 10,
-					display: "flex",
-					paddingBottom: 0,
-				}}
-			>
+		<section className="flex flex-col items-center justify-center gap-8 h-full">
+			<header className="flex">
 				{navigation.map((item, i) => (
-					<>
-						{i > 0 ? <Text css={{ mx: 3 }}>/</Text> : ""}
-						<Link key={item.href} href={item.href}>
-							<Text css={{ opacity: 0.6 }}>{item.name}</Text>
+					<div key={item.name}>
+						{i > 0 ? <span className="mx-3">/</span> : ""}
+
+						<Link passHref href={item.href}>
+							<span className="opacity-60">{item.name}</span>
 						</Link>
-					</>
+					</div>
 				))}
-			</Grid>
+			</header>
+
 			<Hero />
-		</Grid.Container>
+		</section>
 	);
 }
