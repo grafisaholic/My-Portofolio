@@ -8,11 +8,9 @@ export default function ProjectsLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<section className="h-full w-full">
+		<section className="flex flex-col justify-center">
 			<Navigation />
-			<div className="flex flex-col py-10 items-center justify-center">
-				{children}
-			</div>
+			<div className="inline-block max-w-[1280px] px-6 py-6">{children}</div>
 		</section>
 	);
 }

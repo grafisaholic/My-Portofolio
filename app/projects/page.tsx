@@ -1,9 +1,10 @@
 "use client";
 
-import { Spacer } from "@nextui-org/react";
-import { FeatureProject, Project } from "../../components/content/project";
-
 import ProjectData from "@/_data/projects.json";
+import { Spacer } from "@nextui-org/react";
+import { motion } from "framer-motion";
+
+import { FeatureProject, Project } from "../../components/content/project";
 
 export default function ProjectsPage() {
 	const primaryProject = ProjectData.filter((project) => project.isPrimary)[0];
@@ -13,26 +14,37 @@ export default function ProjectsPage() {
 	const otherProjects = ProjectData.filter((project) => !project.featured);
 
 	return (
-		<div className="grid gap-2 max-w-[1280px] px-6">
-			<div className="flex flex-col w-full mb-4">
-				<h2 className="text-[30px]">Featured Project</h2>
+		<>
+			<div className="flex flex-col w-full mb-6">
+				<h2 className="text-[30px] font-semibold">Featured Project</h2>
 				<p className="opacity-60">
 					Some of the projects are from work and some are on my own time.
 				</p>
 			</div>
 
-			<div className="grid grid-rows-2 grid-flow-col gap-6">
-				<div className="row-span-2">
+			<motion.div></motion.div>
+			<div className="grid md:grid-rows-2 md:grid-flow-col gap-6">
+				<motion.div
+					className="row-span-2"
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
+				>
 					<FeatureProject
 						release={primaryProject.release}
 						name={primaryProject.name}
 						desc={primaryProject.description}
 						link={primaryProject.link}
 					/>
-				</div>
+				</motion.div>
 				<div className="row-span-3">
-					{featuredProject.map((r) => (
-						<div key={r.name}>
+					{featuredProject.map((r, i) => (
+						<motion.div
+							key={r.name}
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 0.2 * (i + 1) }}
+						>
 							<Project
 								key={r.name}
 								release={r.release}
@@ -41,28 +53,33 @@ export default function ProjectsPage() {
 								link={r.link}
 							/>
 							<Spacer y={6} />
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
 
 			<Spacer y={2} />
-			<div className="flex flex-col mb-4">
-				<h2 className="text-[30px]">Other Projects</h2>
+			<div className="flex flex-col mb-6">
+				<h2 className="text-[30px] font-semibold">Other Projects</h2>
 			</div>
 
 			<div className="grid gap-6">
-				{otherProjects.map((r) => (
-					<div key={r.name}>
+				{otherProjects.map((r, i) => (
+					<motion.div
+						key={r.name}
+						initial={{ opacity: 0, y: 10 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2 * (i + 1) }}
+					>
 						<Project
 							release={r.release}
 							name={r.name}
 							desc={r.description}
 							link={r.link}
 						/>
-					</div>
+					</motion.div>
 				))}
 			</div>
-		</div>
+		</>
 	);
 }

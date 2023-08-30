@@ -4,8 +4,8 @@ import { Link } from "@nextui-org/react";
 
 export default function About() {
 	return (
-		<div className="grid gap-10 max-w-[1280px] px-6">
-			<div className="flex flex-col">
+		<div className="grid gap-10">
+			<div className="flex flex-col gap-2">
 				<h1 className="text-3xl">About</h1>
 				<p className="opacity-60">👋 Hi there! I am Khabibur Rokhman</p>
 			</div>
@@ -24,7 +24,7 @@ export default function About() {
 				</p>
 			</div>
 
-			<div className="grid grid-rows-4 grid-flow-col gap-4">
+			<div className="grid grid-rows-4 grid-flow-col gap-10">
 				<div className="flex flex-col">
 					<h2 className="text-2xl mb-3">Skillset</h2>
 					<div className="ml-5 flex gap-2 flex-col">

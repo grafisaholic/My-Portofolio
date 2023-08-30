@@ -28,9 +28,13 @@ const ExteralIcon = ({ ...props }) => {
 
 export const Project = ({ name, desc, link, ...props }: ProjectProps) => {
 	return (
-		<Card {...props} isHoverable className="p-6">
-			<CardBody className="py-2 flex gap-3 px-3">
-				<h1 className="text-2xl font-semibold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
+		<Card
+			{...props}
+			isHoverable
+			className="p-6 hover:scale-105 hover:shadow-lg hover:shadow-purple-800/50 "
+		>
+			<CardBody className="py-2 flex gap-2 px-3">
+				<h1 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
 					{name}
 				</h1>
 				<p className="text-sm opacity-60">{desc}</p>
@@ -66,9 +70,12 @@ export const FeatureProject = ({
 	link,
 }: FeatureProjectProps<ProjectProps>) => {
 	return (
-		<Card className="p-6 h-full" isHoverable>
-			<CardBody className="py-2 flex gap-3 px-3">
-				<h1 className="text-3xl font-semibold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
+		<Card
+			className="p-6 h-full hover:scale-105 hover:shadow-lg hover:shadow-purple-800/50"
+			isHoverable
+		>
+			<CardBody className="py-2 flex gap-2 px-3">
+				<h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
 					{name}
 				</h1>
 				<p className="opacity-60">{desc}</p>

@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/react";
 
 export function DevSoftware() {
 	return (
-		<>
+		<ul className="list-disc px-5 space-y-2">
 			<li>
 				<Link
 					href={"https://code.visualstudio.com"}
@@ -13,8 +13,8 @@ export function DevSoftware() {
 				>
 					Visual Studio Code
 				</Link>
-				<ul className="ml-10">
-					<li className="flex flex-row">
+				<ul className="text-sm">
+					<li className="flex flex-row gap-2">
 						<h4>Theme : </h4>
 						<Link
 							href={
@@ -25,7 +25,7 @@ export function DevSoftware() {
 							Night Owl
 						</Link>
 					</li>
-					<li className="flex flex-row">
+					<li className="flex flex-row gap-2">
 						<h4>Font : </h4>
 						<Link
 							href={"https://github.com/microsoft/cascadia-code"}
@@ -34,9 +34,9 @@ export function DevSoftware() {
 							Cascadia Code
 						</Link>
 					</li>
-					<li className="flex flex-row">
+					<li className="flex flex-row gap-2">
 						<h4>Extension : </h4>
-						<div>
+						<div className="space-x-1">
 							<Link
 								href={
 									"https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
@@ -75,6 +75,24 @@ export function DevSoftware() {
 			</li>
 			<li>
 				<Link
+					href={"https://iterm2.com"}
+					target="_blank"
+					isExternal
+					color="secondary"
+				>
+					iTerm2
+				</Link>
+				<ul>
+					<li className="flex flex-row gap-2">
+						<h4>Custom : </h4>
+						<Link href={"https://github.com/ohmyzsh/ohmyzsh"} color="primary">
+							oh-my-zsh
+						</Link>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<Link
 					href={"https://www.figma.com/"}
 					target="_blank"
 					isExternal
@@ -106,13 +124,13 @@ export function DevSoftware() {
 					Postman
 				</Link>
 			</li>
-		</>
+		</ul>
 	);
 }
 
 export function OtherSoftware() {
 	return (
-		<>
+		<ul className="list-disc px-5 space-y-2">
 			<li>
 				<Link
 					href={"https://xmind.app"}
@@ -132,24 +150,6 @@ export function OtherSoftware() {
 				>
 					Notion
 				</Link>
-			</li>
-			<li>
-				<Link
-					href={"https://iterm2.com"}
-					target="_blank"
-					isExternal
-					color="secondary"
-				>
-					iTerm2
-				</Link>
-				<ul className="ml-10">
-					<li className="flex flex-row">
-						<h4>Custom : </h4>
-						<Link href={"https://github.com/ohmyzsh/ohmyzsh"} color="primary">
-							oh-my-zsh
-						</Link>
-					</li>
-				</ul>
 			</li>
 			<li>
 				<Link
@@ -173,6 +173,6 @@ export function OtherSoftware() {
 					Trello (Mangement Task)
 				</Link>
 			</li>
-		</>
+		</ul>
 	);
 }

@@ -10,9 +10,9 @@ export default function ProjectsLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<section className="h-full w-full">
+		<section className="flex flex-col items-center justify-center">
 			<Navigation />
-			<div className="flex flex-col py-10 items-center justify-center">
+			<div className="inline-block max-w-[1280px] justify-center px-6 py-6">
 				{children}
 			</div>
 		</section>

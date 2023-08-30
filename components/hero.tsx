@@ -14,16 +14,28 @@ function Hero() {
 					Hi, my name is Khabibur Rokhman. Full stack web developer skilled SQL,
 					mongoDB, node.js, and want to try to learn more.
 				</p>
-				<p className="opacity-60">
-					I&apos;m currently building project{" "}
-					<Link passHref href="https://payreless.com" target="_blank">
-						Payreless
+				<p>
+					<span className="opacity-60">
+						I&apos;m currently building project{" "}
+					</span>
+					<Link
+						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 font-bold"
+						passHref
+						href="https://payreless.com"
+						target="_blank"
+					>
+						payreless
 					</Link>{" "}
-					and working on{" "}
-					<Link passHref href="https://findig.id" target="_blank">
+					<span className="opacity-60">and working on </span>
+					<Link
+						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 font-bold"
+						passHref
+						href="https://findig.id"
+						target="_blank"
+					>
 						PT. Fintek Digital Nusantara
 					</Link>{" "}
-					at day to day.
+					<span className="opacity-60">at day to day.</span>
 				</p>
 			</div>
 

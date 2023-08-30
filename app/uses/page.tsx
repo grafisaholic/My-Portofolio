@@ -5,15 +5,15 @@ import { DevSoftware, OtherSoftware } from "@/components/content/uses-stack";
 
 export default function Uses() {
 	return (
-		<div className="grid gap-10 max-w-[1280px] px-6 w-full">
-			<div className="flex flex-col">
+		<div className="grid gap-10">
+			<div className="flex flex-col gap-2">
 				<h1 className="text-3xl">Uses</h1>
 				<p className="opacity-60">🛠️ Gear and tools that I use day to day</p>
 			</div>
 
 			<div className="flex flex-col gap-4">
 				<h2 className="text-2xl">Software</h2>
-				<div className="ml-5 flex gap-2 flex-col">
+				<div className="ml-5 flex flex-col md:gap-10 md:flex-row">
 					<DevSoftware />
 					<OtherSoftware />
 				</div>
@@ -39,33 +39,51 @@ export default function Uses() {
 				<div className="flex flex-col">
 					<h2 className="text-2xl mb-3">This Sites & Blogs</h2>
 					<div className="ml-5 flex gap-2 flex-col">
-						<li>
-							<Link href={"https://tailwindcss.com"} color="secondary">
-								TailwindCss :
-							</Link>
-							A utility-first CSS framework packed with pre-built classes that
-							can be composed to build any design.
-						</li>
-						<li>
-							<Link href={"https://supabase.com"} color="secondary">
-								Supebase :
-							</Link>
-							An open source Firebase alternative used to keep track of article
-							page views and reactions on my site.
-						</li>
-						<li>
-							<Link href={"https://dribbble.com"} color="secondary">
-								Dribble :
-							</Link>
-							Resource for inspired design ui/ux for any new project.
-						</li>
-						<li>
-							<Link href={"https://storyset.com"} color="secondary">
-								Storyset :
-							</Link>
-							Resource for awesome free customizable illustrations for your next
-							project
-						</li>
+						<ul className="list-disc space-y-2 px-5">
+							<li>
+								<Link
+									className="mr-2"
+									href={"https://tailwindcss.com"}
+									color="secondary"
+								>
+									TailwindCss :
+								</Link>
+								A utility-first CSS framework packed with pre-built classes that
+								can be composed to build any design.
+							</li>
+							<li>
+								<Link
+									className="mr-2"
+									href={"https://supabase.com"}
+									color="secondary"
+								>
+									Supebase :
+								</Link>
+								An open source Firebase alternative used to keep track of
+								article page views and reactions on my site.
+							</li>
+							<li>
+								<Link
+									className="mr-2"
+									href={"https://dribbble.com"}
+									color="secondary"
+								>
+									Dribble :
+								</Link>
+								Resource for inspired design ui/ux for any new project.
+							</li>
+							<li>
+								<Link
+									className="mr-2"
+									href={"https://storyset.com"}
+									color="secondary"
+								>
+									Storyset :
+								</Link>
+								Resource for awesome free customizable illustrations for your
+								next project
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

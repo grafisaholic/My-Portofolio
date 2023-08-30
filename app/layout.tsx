@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 
 import React from "react";
+
 import { Providers } from "./provider";
-// import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 export default function RootLayout({
 	children,
@@ -12,9 +12,13 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="dark" suppressHydrationWarning>
 			<head />
-			<body>
+			<body className={"min-h-screen bg-background"}>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<main className="h-screen">{children}</main>
+					<div className="relative flex flex-col h-screen">
+						<main className="container mx-auto max-w-7xl flex-grow">
+							{children}
+						</main>
+					</div>
 				</Providers>
 			</body>
 		</html>

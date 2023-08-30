@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-8 h-full">
+		<section className="flex flex-col items-center justify-center gap-8 h-full px-4 md:px-6">
 			<header className="flex">
 				{navigation.map((item, i) => (
 					<div key={item.name}>

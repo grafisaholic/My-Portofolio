@@ -16,15 +16,18 @@ const navigation = [
 
 export default function Navigation() {
 	return (
-		<Navbar isBordered maxWidth="xl">
+		<Navbar isBordered maxWidth="xl" position="sticky">
 			<NavbarContent>
 				<Link href="/">
-					<h1 className="text-[30px] font-bold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
+					<h1 className="text-[30px] font-extrabold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
 						GR
 					</h1>
 				</Link>
 			</NavbarContent>
-			<NavbarContent className="sm:flex basis-1/5 sm:basis-full" justify="end">
+			<NavbarContent
+				className="hidden sm:flex basis-1/5 sm:basis-full"
+				justify="end"
+			>
 				{navigation.map((item) => (
 					<NavbarItem key={item.href}>
 						<Link href={item.href} passHref className="opacity-60">
@@ -33,7 +36,7 @@ export default function Navigation() {
 					</NavbarItem>
 				))}
 			</NavbarContent>
-			<NavbarContent className="sm:hidden">
+			<NavbarContent className="sm:hidden" justify="end">
 				<NavbarMenuToggle />
 			</NavbarContent>
 			<NavbarMenu>
