@@ -1,25 +1,42 @@
 "use client";
 
 import { Link } from "@nextui-org/react";
+import { motion } from "framer-motion";
+
 import { DevSoftware, OtherSoftware } from "@/components/content/uses-stack";
 
 export default function Uses() {
 	return (
 		<div className="grid gap-10">
-			<div className="flex flex-col gap-2">
+			<motion.div
+				className="flex flex-col gap-2"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.3 }}
+			>
 				<h1 className="text-3xl">Uses</h1>
 				<p className="opacity-60">🛠️ Gear and tools that I use day to day</p>
-			</div>
+			</motion.div>
 
-			<div className="flex flex-col gap-4">
+			<motion.div
+				className="flex flex-col gap-4"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+			>
 				<h2 className="text-2xl">Software</h2>
 				<div className="ml-5 flex flex-col md:gap-10 md:flex-row">
 					<DevSoftware />
 					<OtherSoftware />
 				</div>
-			</div>
+			</motion.div>
 
-			<div className="grid grid-rows-4 grid-flow-col gap-8">
+			<motion.div
+				className="grid grid-rows-4 grid-flow-col gap-8"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
 				<div className="flex flex-col">
 					<h2 className="text-2xl mb-3">Harrdware</h2>
 					<div className="ml-5 flex gap-2 flex-col">
@@ -86,7 +103,7 @@ export default function Uses() {
 						</ul>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

@@ -1,16 +1,27 @@
 "use client";
+import { motion } from "framer-motion";
 
 import { Link } from "@nextui-org/react";
 
 export default function About() {
 	return (
 		<div className="grid gap-10">
-			<div className="flex flex-col gap-2">
+			<motion.div
+				className="flex flex-col gap-2"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.3 }}
+			>
 				<h1 className="text-3xl">About</h1>
 				<p className="opacity-60">👋 Hi there! I am Khabibur Rokhman</p>
-			</div>
+			</motion.div>
 
-			<div className="flex flex-col gap-4">
+			<motion.div
+				className="flex flex-col gap-4"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+			>
 				<p>
 					I am a self-taught web developer based in Rembang, Indonesia.
 					currently working as a software engineer at PT. Fintek Digital
@@ -22,9 +33,14 @@ export default function About() {
 					Express, Next, etc. Outside of my job as an employee, sometimes I
 					often do street photography, write blogs, read novels, and badminton.
 				</p>
-			</div>
+			</motion.div>
 
-			<div className="grid grid-rows-4 grid-flow-col gap-10">
+			<motion.div
+				className="grid grid-rows-4 grid-flow-col gap-10"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
 				<div className="flex flex-col">
 					<h2 className="text-2xl mb-3">Skillset</h2>
 					<div className="ml-5 flex gap-2 flex-col">
@@ -113,7 +129,7 @@ export default function About() {
 						</li>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

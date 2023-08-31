@@ -13,7 +13,7 @@ export function DevSoftware() {
 				>
 					Visual Studio Code
 				</Link>
-				<ul className="text-sm">
+				<ul>
 					<li className="flex flex-row gap-2">
 						<h4>Theme : </h4>
 						<Link
@@ -34,7 +34,7 @@ export function DevSoftware() {
 							Cascadia Code
 						</Link>
 					</li>
-					<li className="flex flex-row gap-2">
+					<li className="flex flex-col md:flex-row gap-2">
 						<h4>Extension : </h4>
 						<div className="space-x-1">
 							<Link

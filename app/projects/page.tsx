@@ -15,12 +15,17 @@ export default function ProjectsPage() {
 
 	return (
 		<>
-			<div className="flex flex-col w-full mb-6">
+			<motion.div
+				className="flex flex-col w-full mb-6"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.3 }}
+			>
 				<h2 className="text-[30px] font-semibold">Featured Project</h2>
 				<p className="opacity-60">
 					Some of the projects are from work and some are on my own time.
 				</p>
-			</div>
+			</motion.div>
 
 			<motion.div></motion.div>
 			<div className="grid md:grid-rows-2 md:grid-flow-col gap-6">
@@ -59,9 +64,14 @@ export default function ProjectsPage() {
 			</div>
 
 			<Spacer y={2} />
-			<div className="flex flex-col mb-6">
+			<motion.div
+				className="flex flex-col mb-6"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.3 }}
+			>
 				<h2 className="text-[30px] font-semibold">Other Projects</h2>
-			</div>
+			</motion.div>
 
 			<div className="grid gap-6">
 				{otherProjects.map((r, i) => (
