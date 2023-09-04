@@ -1,41 +1,38 @@
 "use client";
 
-import { Grid, Text } from "@nextui-org/react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import Hero from "@/components/hero";
-
-const navigation = [
-	{ name: "projects", href: "/projects" },
-	{ name: "about", href: "/about" },
-	{ name: "uses", href: "/uses" },
-];
+import NagivationMenu from "@/data/navigation.json";
 
 export default function Home() {
+	const featuredNav = NagivationMenu.filter((n) => n.isFeatured);
+
 	return (
-		<Grid.Container
-			gap={8}
-			alignItems="center"
-			justify="center"
-			css={{ minHeight: "70vh", flexDirection: "column", paddingTop: "$52" }}
-		>
-			<Grid
-				css={{
-					gap: 10,
-					display: "flex",
-					paddingBottom: 0,
-				}}
+		<section className="flex flex-col items-center justify-center gap-6 h-full px-4 md:px-6">
+			<motion.header
+				className="flex"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
 			>
-				{navigation.map((item, i) => (
-					<>
-						{i > 0 ? <Text css={{ mx: 3 }}>/</Text> : ""}
-						<Link key={item.href} href={item.href}>
-							<Text css={{ opacity: 0.6 }}>{item.name}</Text>
+				{featuredNav.map((item, i) => (
+					<div key={item.name}>
+						{i > 0 ? <span className="mx-3">/</span> : ""}
+
+						<Link
+							className="text-gray-300 hover:text-pink-400 duration-500"
+							passHref
+							href={item.link}
+						>
+							{item.title}
 						</Link>
-					</>
+					</div>
 				))}
-			</Grid>
+			</motion.header>
+
 			<Hero />
-		</Grid.Container>
+		</section>
 	);
 }

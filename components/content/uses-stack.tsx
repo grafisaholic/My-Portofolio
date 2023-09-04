@@ -1,98 +1,93 @@
-import { Link, Row, Text, Grid } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
 export function DevSoftware() {
 	return (
-		<>
+		<ul className="list-disc px-5 space-y-2">
 			<li>
 				<Link
 					href={"https://code.visualstudio.com"}
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Visual Studio Code
 				</Link>
 				<ul>
-					<li>
-						<Row>
-							<Text>Theme : </Text>
+					<li className="flex flex-row gap-2">
+						<h4>Theme : </h4>
+						<Link
+							href={
+								"https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+							}
+							color="primary"
+						>
+							Night Owl
+						</Link>
+					</li>
+					<li className="flex flex-row gap-2">
+						<h4>Font : </h4>
+						<Link
+							href={"https://github.com/microsoft/cascadia-code"}
+							color="primary"
+						>
+							Cascadia Code
+						</Link>
+					</li>
+					<li className="flex flex-col md:flex-row gap-2">
+						<h4>Extension : </h4>
+						<div className="space-x-1">
 							<Link
 								href={
-									"https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+									"https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
 								}
 								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
 							>
-								Night Owl
+								Tailwind CSS IntelliSense,
 							</Link>
-						</Row>
-					</li>
-					<li>
-						<Row>
-							<Text>Font : </Text>
 							<Link
-								href={"https://github.com/microsoft/cascadia-code"}
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+								}
 								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
 							>
-								Cascadia Code
+								Prettier,
 							</Link>
-						</Row>
+							<Link
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+								}
+								color="primary"
+							>
+								Eslint,
+							</Link>
+							<Link
+								href={
+									"https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
+								}
+								color="primary"
+							>
+								Dart
+							</Link>
+						</div>
 					</li>
-					<li>
-						<Grid.Container direction="row">
-							Extension :
-							<div>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Tailwind CSS IntelliSense,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Prettier,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Eslint,
-								</Link>
-								<Link
-									href={
-										"https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
-									}
-									color="primary"
-									css={{
-										marginLeft: 7,
-									}}
-								>
-									Dart
-								</Link>
-							</div>
-						</Grid.Container>
+				</ul>
+			</li>
+			<li>
+				<Link
+					href={"https://iterm2.com"}
+					target="_blank"
+					isExternal
+					color="secondary"
+				>
+					iTerm2
+				</Link>
+				<ul>
+					<li className="flex flex-row gap-2">
+						<h4>Custom : </h4>
+						<Link href={"https://github.com/ohmyzsh/ohmyzsh"} color="primary">
+							oh-my-zsh
+						</Link>
 					</li>
 				</ul>
 			</li>
@@ -102,6 +97,7 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Figma
 				</Link>
@@ -112,6 +108,7 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Brave
 				</Link>
@@ -122,17 +119,18 @@ export function DevSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Postman
 				</Link>
 			</li>
-		</>
+		</ul>
 	);
 }
 
 export function OtherSoftware() {
 	return (
-		<>
+		<ul className="list-disc px-5 space-y-2">
 			<li>
 				<Link
 					href={"https://xmind.app"}
@@ -155,36 +153,11 @@ export function OtherSoftware() {
 			</li>
 			<li>
 				<Link
-					href={"https://iterm2.com"}
-					target="_blank"
-					isExternal
-					color="secondary"
-				>
-					iTerm2
-				</Link>
-				<ul>
-					<li>
-						<Row>
-							<Text>Custom : </Text>
-							<Link
-								href={"https://github.com/ohmyzsh/ohmyzsh"}
-								color="primary"
-								css={{
-									marginLeft: 7,
-								}}
-							>
-								oh-my-zsh
-							</Link>
-						</Row>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<Link
 					href={"https://open.spotify.com"}
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Spotify
 				</Link>
@@ -195,10 +168,11 @@ export function OtherSoftware() {
 					target="_blank"
 					isExternal
 					color="secondary"
+					showAnchorIcon
 				>
 					Trello (Mangement Task)
 				</Link>
 			</li>
-		</>
+		</ul>
 	);
 }
