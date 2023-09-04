@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Navbar,
 	NavbarMenu,
@@ -19,22 +21,20 @@ import { useTheme } from "next-themes";
 
 import { BurgerIcon } from "./icons/burger-menu";
 import { IconDark, IconLight } from "./icons/theme";
-
-const navigation = [
-	{ name: "projects", href: "/projects" },
-	{ name: "about", href: "/about" },
-	{ name: "uses", href: "/uses" },
-];
+import NavigationMenu from "@/data/navigation.json";
 
 export default function Navigation() {
 	const { theme, setTheme } = useTheme();
+
+	const featuredNav = NavigationMenu.filter((n) => n.isFeatured);
+	// const otherNav = NavigationMenu.filter((n) => !n.isFeatured);
 
 	return (
 		<Navbar isBordered maxWidth="xl" position="sticky">
 			<NavbarContent>
 				<Link href="/">
-					<h1 className="text-[30px] font-extrabold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
-						GR
+					<h1 className="text-[30px] font-bold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
+						Grafisaholic
 					</h1>
 				</Link>
 			</NavbarContent>
@@ -42,10 +42,14 @@ export default function Navigation() {
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
-				{navigation.map((item) => (
-					<NavbarItem key={item.href}>
-						<Link href={item.href} passHref className="opacity-60">
-							{item.name}
+				{featuredNav.map((n) => (
+					<NavbarItem key={n.name}>
+						<Link
+							href={n.link}
+							passHref
+							className="text-gray-300 hover:text-pink-400 duration-500"
+						>
+							{n.title}
 						</Link>
 					</NavbarItem>
 				))}
@@ -66,44 +70,22 @@ export default function Navigation() {
 						variant="faded"
 						aria-label="Dropdown menu with description"
 					>
-						<DropdownSection title="Other Menu's">
-							<DropdownItem
-								endContent={
-									<label className="text-sm text-gray-700 dark:text-gray-500">
-										incomming
-									</label>
-								}
-							>
-								Dashboard
-							</DropdownItem>
-							<DropdownItem
-								endContent={
-									<label className="text-sm text-gray-700 dark:text-gray-500">
-										incomming
-									</label>
-								}
-							>
-								Guesbook
-							</DropdownItem>
-							<DropdownItem
-								endContent={
-									<label className="text-sm text-gray-700 dark:text-gray-500">
-										incomming
-									</label>
-								}
-							>
-								Contact
-							</DropdownItem>
-							<DropdownItem
-								endContent={
-									<label className="text-sm text-gray-700 dark:text-gray-500">
-										incomming
-									</label>
-								}
-							>
-								Etc.
-							</DropdownItem>
-						</DropdownSection>
+						{/* <DropdownSection title="Other Menu's">
+							{otherNav.map((n) => (
+								<DropdownItem
+									endContent={
+										n.isCommingSoon && (
+											<label className="text-sm text-gray-700 dark:text-gray-500">
+												incomming
+											</label>
+										)
+									}
+									key={n.name}
+								>
+									{n.title}
+								</DropdownItem>
+							))}
+						</DropdownSection> */}
 						<DropdownSection title="Custom Theme">
 							<DropdownItem
 								onClick={() => setTheme("dark")}
@@ -135,13 +117,49 @@ export default function Navigation() {
 				<NavbarMenuToggle />
 			</NavbarContent>
 			<NavbarMenu>
-				{navigation.map((item) => (
-					<NavbarMenuItem key={item.href}>
-						<Link href={item.href} passHref className="opacity-60">
-							{item.name}
+				{featuredNav.map((n) => (
+					<NavbarMenuItem key={n.name} className="my-1 flex justify-between">
+						<Link href={n.link} passHref className="opacity-60">
+							{n.title}
 						</Link>
+
+						{n.isCommingSoon && (
+							<label className="text-sm text-gray-700 dark:text-gray-500">
+								incomming
+							</label>
+						)}
 					</NavbarMenuItem>
 				))}
+				<div className="mt-auto py-10 flex justify-between">
+					<NavbarMenuItem>
+						<Button
+							variant={theme == "light" ? "bordered" : undefined}
+							onClick={() => setTheme("dark")}
+							startContent={
+								<IconDark
+									className="text-xl text-default-500 pointer-events-none flex-shrink-0"
+									theme={theme}
+								/>
+							}
+						>
+							Dark Mode
+						</Button>
+					</NavbarMenuItem>
+					<NavbarMenuItem>
+						<Button
+							variant={theme == "dark" ? "bordered" : undefined}
+							onClick={() => setTheme("light")}
+							startContent={
+								<IconLight
+									className="text-xl text-default-500 pointer-events-none flex-shrink-0"
+									theme={theme}
+								/>
+							}
+						>
+							Light Mode
+						</Button>
+					</NavbarMenuItem>
+				</div>
 			</NavbarMenu>
 		</Navbar>
 	);

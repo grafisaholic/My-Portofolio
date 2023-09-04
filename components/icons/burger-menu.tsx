@@ -16,9 +16,9 @@ export const BurgerIcon = ({ theme }: IconProps) => {
 			<path
 				d="M4 17H8M12 17H20M4 12H20M4 7H12M16 7H20"
 				stroke={theme == "light" ? "#000000" : "#FFFFFF"}
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="1.5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

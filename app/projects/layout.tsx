@@ -1,8 +1,22 @@
-"use client";
+import Navigation from "@/components/navigation";
 
-import React from "react";
+import { generateMetadata } from "@/utils/metadata";
 
-import Navigation from "../../components/navigation";
+export const metadata = {
+	...generateMetadata({
+		title: "Projects - Khabibur Rokhman",
+		description:
+			"Some of the projects are from work and some are on my own time",
+		keywords: [
+			"grafisaholic",
+			"khabibur rokhman",
+			"tech",
+			"project",
+			"portofolio",
+			"app",
+		],
+	}),
+};
 
 export default function ProjectsLayout({
 	children,

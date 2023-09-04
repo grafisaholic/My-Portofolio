@@ -1,0 +1,48 @@
+[
+	{
+		"title": "About",
+		"name": "about",
+		"link": "/about",
+		"isFeatured": true
+	},
+	{
+		"title": "Projects",
+		"name": "projects",
+		"link": "/projects",
+		"isFeatured": true
+	},
+	{
+		"title": "Uses",
+		"name": "uses",
+		"link": "/uses",
+		"isFeatured": true
+	},
+	{
+		"title": "Dasboard",
+		"name": "dashboard",
+		"link": "/dashboard",
+		"isFeatured": false,
+		"isCommingSoon": true
+	},
+	{
+		"title": "Guestbook",
+		"name": "guestbook",
+		"link": "/guestbook",
+		"isFeatured": false,
+		"isCommingSoon": true
+	},
+	{
+		"title": "Contact",
+		"name": "contact",
+		"link": "/contact",
+		"isFeatured": false,
+		"isCommingSoon": true
+	},
+	{
+		"title": "Etc.",
+		"name": "etc",
+		"link": "/etc",
+		"isFeatured": false,
+		"isCommingSoon": true
+	}
+]

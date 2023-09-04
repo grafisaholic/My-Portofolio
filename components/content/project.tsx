@@ -1,6 +1,4 @@
-"use client";
-
-import { Card, CardBody, CardFooter, Button } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Button, Image } from "@nextui-org/react";
 import NextLink from "next/link";
 
 type ProjectProps = {
@@ -31,7 +29,7 @@ export const Project = ({ name, desc, link, ...props }: ProjectProps) => {
 		<Card
 			{...props}
 			isHoverable
-			className="p-6 hover:scale-105 hover:shadow-lg hover:shadow-purple-800/50 "
+			className="p-6 hover:scale-105 hover:shadow-lg hover:shadow-purple-800/50 h-full"
 		>
 			<CardBody className="py-2 flex gap-2 px-3">
 				<h1 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-blue-600  bg-clip-text text-transparent">
@@ -75,18 +73,25 @@ export const FeatureProject = ({
 			isHoverable
 		>
 			<CardBody className="py-2 flex gap-2 px-3">
-				<h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
+				<h1 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
 					{name}
 				</h1>
 				<p className="opacity-60">{desc}</p>
 			</CardBody>
+			<Image
+				alt="Woman listing to music"
+				className="rounded-lg mt-6"
+				// height={200}
+				src="/projects/payreless.png"
+				// width={200}
+			/>
 			<CardFooter>
 				<NextLink href={link?.href} passHref target={"_blank"}>
 					<Button
 						variant="ghost"
 						color="secondary"
 						size="sm"
-						className="mt-10"
+						className="mt-5"
 						endContent={
 							<ExteralIcon fill="currentColor" css={{ marginnLefth: 10 }} />
 						}

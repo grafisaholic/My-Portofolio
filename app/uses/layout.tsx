@@ -1,6 +1,26 @@
-"use client";
+import Navigation from "@/components/navigation";
 
-import Navigation from "../../components/navigation";
+import { generateMetadata } from "@/utils/metadata";
+
+export const metadata = {
+	...generateMetadata({
+		title: "Uses - Khabibur Rokhman",
+		description: "Gear and tools that I use day to day",
+		keywords: [
+			"grafisaholic",
+			"khabibur rokhman",
+			"hardware",
+			"software",
+			"apps",
+			"tools",
+			"extensions",
+			"stack",
+			"website",
+			"tech",
+			"uses",
+		],
+	}),
+};
 
 export default function ProjectsLayout({
 	children,

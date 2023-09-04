@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectData from "@/_data/projects.json";
+import ProjectData from "@/data/projects.json";
 import { Spacer } from "@nextui-org/react";
 import { motion } from "framer-motion";
 

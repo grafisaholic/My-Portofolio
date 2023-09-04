@@ -29,7 +29,7 @@ function Hero() {
 						I&apos;m currently building project{" "}
 					</span>
 					<Link
-						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 font-bold"
+						className="underline decoration-pink-600 decoration-[3px] underline-offset-4  hover:text-pink-400 hover:decoration-[1px] hover:decoration-pink-500 hover:font-normal duration-500"
 						passHref
 						href="https://payreless.com"
 						target="_blank"
@@ -38,7 +38,7 @@ function Hero() {
 					</Link>{" "}
 					<span className="opacity-60">and working on </span>
 					<Link
-						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 font-bold"
+						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 hover:text-pink-400 hover:decoration-[1px] hover:decoration-pink-500 hover:font-normal duration-500"
 						passHref
 						href="https://findig.id"
 						target="_blank"
