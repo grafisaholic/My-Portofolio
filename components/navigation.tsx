@@ -11,11 +11,12 @@ import {
 } from "@nextui-org/react";
 import {
 	Dropdown,
-	DropdownTrigger,
 	DropdownMenu,
+	DropdownTrigger,
 	DropdownItem,
 	Button,
 } from "@nextui-org/react";
+
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
@@ -27,7 +28,9 @@ export default function Navigation() {
 	const { theme, setTheme } = useTheme();
 
 	const featuredNav = NavigationMenu.filter((n) => n.isFeatured);
-	// const otherNav = NavigationMenu.filter((n) => !n.isFeatured);
+	const otherNav = NavigationMenu.filter(
+		(n) => !n.isFeatured && !n.isCommingSoon
+	);
 
 	return (
 		<Navbar isBordered maxWidth="xl" position="sticky">
@@ -55,9 +58,9 @@ export default function Navigation() {
 				))}
 
 				<Dropdown
-					showArrow
+					backdrop="blur"
 					classNames={{
-						base: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-default-50 dark:to-black",
+						base: "py-1 px-1 ",
 						arrow: "bg-default-200",
 					}}
 				>
@@ -70,7 +73,7 @@ export default function Navigation() {
 						variant="faded"
 						aria-label="Dropdown menu with description"
 					>
-						{/* <DropdownSection title="Other Menu's">
+						<DropdownSection title="Other Menu's">
 							{otherNav.map((n) => (
 								<DropdownItem
 									endContent={
@@ -81,11 +84,12 @@ export default function Navigation() {
 										)
 									}
 									key={n.name}
+									href={n.link}
 								>
 									{n.title}
 								</DropdownItem>
 							))}
-						</DropdownSection> */}
+						</DropdownSection>
 						<DropdownSection title="Custom Theme">
 							<DropdownItem
 								onClick={() => setTheme("dark")}

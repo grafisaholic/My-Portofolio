@@ -22,7 +22,7 @@
 		"name": "dashboard",
 		"link": "/dashboard",
 		"isFeatured": false,
-		"isCommingSoon": true
+		"isCommingSoon": false
 	},
 	{
 		"title": "Guestbook",
