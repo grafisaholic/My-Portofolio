@@ -23,10 +23,12 @@ export default function About() {
 				transition={{ duration: 0.5 }}
 			>
 				<p>
-					I am a self-taught web developer based in Rembang, Indonesia.
-					currently working as a software engineer at PT. Fintek Digital
-					Nusantara. I started my career from a high school graduate in 2017 to
-					become a factory worker and finally anchored to become a programmer.
+					I am a passionate self-taught web developer from Rembang, Indonesia,
+					with a unique journey from a high school graduate and factory worker
+					in 2017 to a skilled programmer today. My determination and rapid
+					learning have fueled my career growth, and I am eager to bring my
+					versatile skill set and fresh perspectives to new challenges and
+					opportunities in the tech industry.
 				</p>
 				<p>
 					I build web using various JavaScript frameworks, Like Reactjs,
@@ -44,7 +46,7 @@ export default function About() {
 				<div className="flex flex-col">
 					<h2 className="text-2xl mb-3">Skillset</h2>
 					<div className="ml-5 flex gap-2 flex-col">
-						<li>Bootstrap (3+), Cakra-ui</li>
+						<li>Bootstrap (3+), Cakra-ui, TailwindCSS</li>
 						<li>Node js, JavaScript (ES2015+)</li>
 						<li>jQuery, Reactjs, NextJs</li>
 						<li>Mysql, MONGODB, Redis</li>
@@ -101,7 +103,7 @@ export default function About() {
 						</li>
 						<li>
 							<Link
-								href={"https://www.showwcase.com/grafisaholic"}
+								href={"https://grafisaholic.showwcase.com"}
 								target="_blank"
 								isExternal
 								color="secondary"

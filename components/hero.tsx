@@ -24,7 +24,12 @@ function Hero() {
 					Hi, my name is Khabibur Rokhman. Full stack web developer skilled SQL,
 					mongoDB, node.js, and want to try to learn more.
 				</p>
-				<p>
+				<p className="opacity-60">
+					It's a pleasure to meet you! I'm always open to collaborating and
+					sharing insights, so let's explore how we can work together and create
+					something innovative.
+				</p>
+				{/* <p>
 					<span className="opacity-60">
 						I&apos;m currently building project{" "}
 					</span>
@@ -46,7 +51,7 @@ function Hero() {
 						PT. Fintek Digital Nusantara
 					</Link>{" "}
 					<span className="opacity-60">at day to day.</span>
-				</p>
+				</p> */}
 			</motion.div>
 
 			<motion.div
