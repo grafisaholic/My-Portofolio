@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 import CurrentFavTech from "./content/current-fav-tech";
@@ -25,33 +24,10 @@ function Hero() {
 					mongoDB, node.js, and want to try to learn more.
 				</p>
 				<p className="opacity-60">
-					It's a pleasure to meet you! I'm always open to collaborating and
-					sharing insights, so let's explore how we can work together and create
-					something innovative.
+					It&apos;s a pleasure to meet you! I&apos;m always open to
+					collaborating and sharing insights, so let&apos;s explore how we can
+					work together and create something innovative.
 				</p>
-				{/* <p>
-					<span className="opacity-60">
-						I&apos;m currently building project{" "}
-					</span>
-					<Link
-						className="underline decoration-pink-600 decoration-[3px] underline-offset-4  hover:text-pink-400 hover:decoration-[1px] hover:decoration-pink-500 hover:font-normal duration-500"
-						passHref
-						href="https://payreless.com"
-						target="_blank"
-					>
-						payreless
-					</Link>{" "}
-					<span className="opacity-60">and working on </span>
-					<Link
-						className="underline decoration-pink-600 decoration-[3px] underline-offset-4 hover:text-pink-400 hover:decoration-[1px] hover:decoration-pink-500 hover:font-normal duration-500"
-						passHref
-						href="https://findig.id"
-						target="_blank"
-					>
-						PT. Fintek Digital Nusantara
-					</Link>{" "}
-					<span className="opacity-60">at day to day.</span>
-				</p> */}
 			</motion.div>
 
 			<motion.div
